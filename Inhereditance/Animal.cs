@@ -170,4 +170,20 @@ namespace Inhereditance
             Console.WriteLine("whine");
         }
     }
+    internal class WolfMan : Wolf, IPerson
+    {
+
+        public WolfMan(string name, int age, double weight, int height, string uniqueProperty) : base(name, age, weight, height, uniqueProperty)
+        {
+            this.Name = name;
+            this.Age = age;
+            this.Weight = weight;
+            this.Height = height;
+            this.UniqueProperty = uniqueProperty;
+        }
+        public void Talk()
+        {
+            Console.WriteLine("Hello, is it me you looking for?");
+        }
+    }
 }

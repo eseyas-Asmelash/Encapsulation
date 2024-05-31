@@ -8,5 +8,6 @@ namespace Inhereditance
 {
     internal interface IPerson
     {
+        void Talk();
     }
 }
