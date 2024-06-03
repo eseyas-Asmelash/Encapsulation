@@ -9,10 +9,10 @@ namespace Inhereditance
     internal abstract class Animal
     {
 
-        public abstract string Name { get; set; }
-        public abstract int Age { get; set; }
-        public abstract double Weight { get; set; }
-        public abstract int Height { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public double Weight { get; set; }
+        public int Height { get; set; }
 
         public Animal(string name, int age, double weight, int height)
         {
@@ -23,15 +23,12 @@ namespace Inhereditance
         }
 
         public abstract void DoSound();
+        public abstract string Stats();
 
     }
 
     internal class Horse : Animal
     {
-        public override string Name { get; set; }
-        public override int Age { get; set; }
-        public override double Weight { get; set; }
-        public override int Height { get; set; }
         public string UniqueProperty { get; set; }
 
         public Horse(string name, int age, double weight, int height, string uniqueProperty)
@@ -46,16 +43,17 @@ namespace Inhereditance
 
         public override void DoSound()
         {
-            Console.WriteLine("Neigh");
+            Console.WriteLine("hihhhihh");
+        }
+        public override string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
         }
 
     }
     internal class Dog : Animal
     {
-        public override string Name { get; set; }
-        public override int Age { get; set; }
-        public override double Weight { get; set; }
-        public override int Height { get; set; }
+
         public string UniqueProperty { get; set; }
 
         public Dog(string name, int age, double weight, int height, string uniqueProperty)
@@ -70,16 +68,17 @@ namespace Inhereditance
 
         public override void DoSound()
         {
-            Console.WriteLine("bark");
+            Console.WriteLine("bau bau");
+        }
+        public override string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
         }
 
     }
     internal class Hedgehog : Animal
     {
-        public override string Name { get; set; }
-        public override int Age { get; set; }
-        public override double Weight { get; set; }
-        public override int Height { get; set; }
+
         public string UniqueProperty { get; set; }
 
         public Hedgehog(string name, int age, double weight, int height, string uniqueProperty)
@@ -96,14 +95,15 @@ namespace Inhereditance
         {
             Console.WriteLine("Snuffling");
         }
+        public override string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+        }
 
     }
     internal class Worm : Animal
     {
-        public override string Name { get; set; }
-        public override int Age { get; set; }
-        public override double Weight { get; set; }
-        public override int Height { get; set; }
+
         public string UniqueProperty { get; set; }
 
         public Worm(string name, int age, double weight, int height, string uniquiProperty)
@@ -121,14 +121,14 @@ namespace Inhereditance
         {
             Console.WriteLine("Grunting");
         }
+        public override string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+        }
 
     }
     internal class Bird : Animal
     {
-        public override string Name { get; set; }
-        public override int Age { get; set; }
-        public override double Weight { get; set; }
-        public override int Height { get; set; }
         public string UniqueProperty { get; set; }
 
         public Bird(string name, int age, double weight, int height, string uniqueProperty) 
@@ -143,16 +143,16 @@ namespace Inhereditance
 
         public override void DoSound()
         {
-            Console.WriteLine("Sing");
+            Console.WriteLine("chip chip");
+        }
+        public override string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
         }
 
     }
     internal class Wolf : Animal
     {
-        public override string Name { get ; set ; }
-        public override int Age { get; set; }
-        public override double Weight { get; set; }
-        public override int Height { get; set; }
         public string UniqueProperty { get; set; }
 
         public Wolf(string name, int age, double weight, int height, string uniqueProperty)
@@ -167,7 +167,11 @@ namespace Inhereditance
 
         public override void DoSound()
         {
-            Console.WriteLine("whine");
+            Console.WriteLine("auhhhhh");
+        }
+        public override string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
         }
     }
     internal class WolfMan : Wolf, IPerson

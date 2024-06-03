@@ -10,7 +10,8 @@ namespace Inhereditance
     {
         internal class Pelican : Bird
         {
-            public Pelican(string name, int age, double weight, int height, string uniqueProperty) : base(name, age, weight, height, uniqueProperty)
+            public Pelican(string name, int age, double weight, int height, string uniqueProperty) 
+                : base(name, age, weight, height, uniqueProperty)
             {
                 this.Name = name;
                 this.Age = age;
@@ -22,7 +23,8 @@ namespace Inhereditance
         }
         internal class Flamingo : Bird
         {
-            public Flamingo(string name, int age, double weight, int height, string uniqueProperty) : base(name, age, weight, height, uniqueProperty)
+            public Flamingo(string name, int age, double weight, int height, string uniqueProperty) 
+                : base(name, age, weight, height, uniqueProperty)
             {
                 this.Name = name;
                 this.Age = age;

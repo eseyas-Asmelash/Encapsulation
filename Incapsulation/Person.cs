@@ -16,7 +16,7 @@ class Person
         set
         {
             if (value < 0 )
-                throw new ArgumentException(nameof(value),
+                throw new ArgumentException(
                       "The value should be above 0.");
 
             age = value;
@@ -30,9 +30,9 @@ class Person
         }
         set
         {
-            if (value.Length < 2 || value.Length < 10)
-                throw new ArgumentException(nameof(value),
-                      "The valid range is between 2 and 10.");
+            if (value.Length < 2 || value.Length > 10)
+                throw new ArgumentException(
+                      "The first Name should be between 2 and 10.");
 
             fName = value;
         }
@@ -45,9 +45,9 @@ class Person
         }
         set
         {
-            if (value.Length < 3 || value.Length < 15)
-                throw new ArgumentException(nameof(value),
-                      "The valid range is between 3 and 15.");
+            if (value.Length < 3 || value.Length > 15)
+                throw new ArgumentException(
+                      "The last Name should be between 3 and 15.");
 
             lName = value;
         }
@@ -61,10 +61,14 @@ class Person
         set
         {
             if (value < 0)
-                throw new ArgumentException(nameof(value),
+                throw new ArgumentException(
                       "The valid should be above 0.");
 
             weight = value;
         }
+    }
+    public override string ToString()
+    {
+        return $"{Age} {FName} {LName} {Weight}";
     }
 }
