@@ -67,16 +67,17 @@ class PersonHandler
 
         return person;
     }
-    public void ReadPersonValues(int age, string fName, string lName, int weight)
+    public string ReadPersonValues(int age, string fName, string lName, int weight)
     {
+        List<string> strings = new List<string>();
         try
         {
-            CreatePerson(age, fName, lName, weight);
+            Person p = CreatePerson(age, fName, lName, weight);
+            return p.ToString();
         }
         catch (ArgumentException ex)
         {
-
-            Console.WriteLine(ex.Message);
+            return ex.Message;
         }
 
     }
