@@ -43,7 +43,7 @@ namespace Inhereditance
 
         public override void DoSound()
         {
-            Console.WriteLine("hihhhihh");
+            Console.WriteLine("neigh");
         }
         public override string Stats()
         {
@@ -68,11 +68,15 @@ namespace Inhereditance
 
         public override void DoSound()
         {
-            Console.WriteLine("bau bau");
+            Console.WriteLine("bark");
         }
         public override string Stats()
         {
             return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+        }
+        public string DogSays()
+        {
+            return "Let go out for a walk";
         }
 
     }
