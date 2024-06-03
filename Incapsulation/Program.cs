@@ -13,10 +13,10 @@ class Program
             //var p1 = person.CreatePerson(23, "Junee", "roberts", 59);
             //var p2 = person.CreatePerson(23, "june", "mathson", 20);
             //var p3 = person.CreatePerson(34, "Simon", "Sammm", 23);
-        person.ReadPersonValues(1, "an", "dem", 70);
-        person.ReadPersonValues(23, "Junee", "roberts", 59);
-        person.CreatePerson(23, "june", "mathson", 20);
-        person.ReadPersonValues(34, "Simon", "Sammm", 23);
+        person.ReadPersonValues(-11, "an", "dem", 70);
+        person.ReadPersonValues(23, "J", "roberts", 59);
+        person.ReadPersonValues(23, "june", "ma", 20);
+        person.ReadPersonValues(-34, "Simon", "Sammm",-23);
         //persons.Add(person.CreatePerson(1, "alan", "dave", 70));
         //persons.Add(person.CreatePerson(23, "Junee", "roberts", 59));
         //persons.Add(person.CreatePerson(23, "june", "mathson", 20));
