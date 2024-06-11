@@ -6,45 +6,30 @@ using System.Threading.Tasks;
 
 namespace Inhereditance
 {
-    internal class Birds
+    internal class Pelican : Bird
     {
-        internal class Pelican : Bird
+        public Pelican(string name, int age, double weight, int height, string uniqueProperty) 
+            : base(name, age, weight, height, uniqueProperty)
         {
-            public Pelican(string name, int age, double weight, int height, string uniqueProperty) 
-                : base(name, age, weight, height, uniqueProperty)
-            {
-                this.Name = name;
-                this.Age = age;
-                this.Weight = weight;
-                this.Height = height;
-                this.UniqueProperty = uniqueProperty;
-            }
-
+            this.UniqueProperty = uniqueProperty;
         }
-        internal class Flamingo : Bird
+
+    }
+    internal class Flamingo : Bird
+    {
+        public Flamingo(string name, int age, double weight, int height, string uniqueProperty) 
+            : base(name, age, weight, height, uniqueProperty)
         {
-            public Flamingo(string name, int age, double weight, int height, string uniqueProperty) 
-                : base(name, age, weight, height, uniqueProperty)
-            {
-                this.Name = name;
-                this.Age = age;
-                this.Weight = weight;
-                this.Height = height;
-                this.UniqueProperty = uniqueProperty;
-            }
-
+            this.UniqueProperty = uniqueProperty;
         }
-        internal class Swan : Bird
+
+    }
+    internal class Swan : Bird
+    {
+        public Swan(string name, int age, double weight, int height, string uniqueProperty) : base(name, age, weight, height, uniqueProperty)
         {
-            public Swan(string name, int age, double weight, int height, string uniqueProperty) : base(name, age, weight, height, uniqueProperty)
-            {
-                this.Name = name;
-                this.Age = age;
-                this.Weight = weight;
-                this.Height = height;
-                this.UniqueProperty = uniqueProperty;
-            }
-
+            this.UniqueProperty = uniqueProperty;
         }
+
     }
 }

@@ -23,7 +23,10 @@ namespace Inhereditance
         }
 
         public abstract void DoSound();
-        public abstract string Stats();
+        public virtual string Stats()
+        {
+            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height}";
+        }
 
     }
 
@@ -34,10 +37,6 @@ namespace Inhereditance
         public Horse(string name, int age, double weight, int height, string uniqueProperty)
             : base(name, age, weight, height)
         {
-            Name = name;
-            Age = age;
-            Weight = weight;
-            Height = height;
             UniqueProperty = uniqueProperty;
         }
 
@@ -47,7 +46,7 @@ namespace Inhereditance
         }
         public override string Stats()
         {
-            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+            return $"{base.Stats()} Property: {UniqueProperty}";
         }
 
     }
@@ -59,10 +58,6 @@ namespace Inhereditance
         public Dog(string name, int age, double weight, int height, string uniqueProperty)
             : base(name, age, weight, height)
         {
-            Name = name;
-            Age = age;
-            Weight = weight;
-            Height = height;
             UniqueProperty = uniqueProperty;
         }
 
@@ -72,7 +67,7 @@ namespace Inhereditance
         }
         public override string Stats()
         {
-            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+            return $"{base.Stats()} Property: {UniqueProperty}";
         }
         public string DogSays()
         {
@@ -88,10 +83,6 @@ namespace Inhereditance
         public Hedgehog(string name, int age, double weight, int height, string uniqueProperty)
             : base(name, age, weight, height)
         {
-            Name = name;
-            Age = age;
-            Weight = weight;
-            Height = height;
             UniqueProperty = uniqueProperty;
         }
 
@@ -101,7 +92,7 @@ namespace Inhereditance
         }
         public override string Stats()
         {
-            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+            return $"{base.Stats()} Property: {UniqueProperty}";
         }
 
     }
@@ -113,12 +104,7 @@ namespace Inhereditance
         public Worm(string name, int age, double weight, int height, string uniquiProperty)
             : base(name,age,weight,height)
         {
-            Name = name;
-            Age = age;
-            Weight = weight;
-            Height = height;
             UniqueProperty = uniquiProperty;
-
         }
 
         public override void DoSound()
@@ -127,7 +113,7 @@ namespace Inhereditance
         }
         public override string Stats()
         {
-            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+            return $"{base.Stats()} Property: {UniqueProperty}";
         }
 
     }
@@ -138,10 +124,6 @@ namespace Inhereditance
         public Bird(string name, int age, double weight, int height, string uniqueProperty) 
             : base(name, age, weight, height)
         {
-            Name = name;
-            Age = age;
-            Weight = weight;
-            Height = height;
             UniqueProperty = uniqueProperty;
         }
 
@@ -151,7 +133,7 @@ namespace Inhereditance
         }
         public override string Stats()
         {
-            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+            return $"{base.Stats()} Property: {UniqueProperty}";
         }
 
     }
@@ -162,10 +144,6 @@ namespace Inhereditance
         public Wolf(string name, int age, double weight, int height, string uniqueProperty)
             : base(name, age, weight, height)
         {
-            Name = name;
-            Age = age;
-            Weight = weight;
-            Height = height;
             UniqueProperty = uniqueProperty;
         }
 
@@ -175,7 +153,7 @@ namespace Inhereditance
         }
         public override string Stats()
         {
-            return $"Name: {Name} Age: {Age} Weight: {Weight} Height: {Height} Property: {UniqueProperty}";
+            return $"{base.Stats()} Property: {UniqueProperty}";
         }
     }
     internal class WolfMan : Wolf, IPerson
@@ -183,10 +161,6 @@ namespace Inhereditance
 
         public WolfMan(string name, int age, double weight, int height, string uniqueProperty) : base(name, age, weight, height, uniqueProperty)
         {
-            this.Name = name;
-            this.Age = age;
-            this.Weight = weight;
-            this.Height = height;
             this.UniqueProperty = uniqueProperty;
         }
         public void Talk()
